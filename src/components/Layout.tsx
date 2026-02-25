@@ -24,7 +24,7 @@ export const Layout = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col grid-overlay cursor-none">
+    <div className="min-h-screen flex flex-col grid-overlay">
       {/* Custom Cursor Glow */}
       <motion.div
         className="fixed top-0 left-0 w-96 h-96 bg-brand-green/5 rounded-full blur-[100px] pointer-events-none z-[9999] hidden lg:block"
