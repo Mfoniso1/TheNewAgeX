@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { Menu, X, Terminal } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { cn } from '@/src/lib/utils';
+import { Logo } from './Logo';
 
 const navLinks = [
   { name: 'Mission Control', path: '/' },
@@ -20,8 +21,8 @@ export const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full z-50 border-b border-zinc-800 bg-brand-bg/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center space-x-2 group">
-            <Terminal className="w-8 h-8 text-brand-green group-hover:scale-110 transition-transform" />
+          <Link to="/" className="flex items-center space-x-3 group">
+            <Logo className="w-10 h-10 text-brand-green group-hover:scale-110 transition-transform" />
             <span className="font-display text-2xl text-white tracking-tighter">
               THE NEW AGE <span className="text-brand-green">X</span>
             </span>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Twitter, MessageCircle, Terminal } from 'lucide-react';
+import { Github, Twitter, MessageCircle } from 'lucide-react';
+import { Logo } from './Logo';
 
 export const Footer = () => {
   return (
@@ -8,7 +9,7 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="space-y-4">
           <Link to="/" className="flex items-center space-x-2">
-            <Terminal className="w-6 h-6 text-brand-green" />
+            <Logo className="w-6 h-6 text-brand-green" />
             <span className="font-display text-xl text-white tracking-tighter">
               THE NEW AGE <span className="text-brand-green">X</span>
             </span>
