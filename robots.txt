@@ -1,0 +1,27 @@
+# Standard SEO: Allow all search engines to index the site
+User-agent: *
+Allow: /
+
+# LLM Crawlers: Specifically allowing AI agents for indexing and RAG
+# OpenAI's GPTBot
+User-agent: GPTBot
+Allow: /
+
+# Common Crawl (used by many LLMs for training data)
+User-agent: CCBot
+Allow: /
+
+# Google-Extended (Controls Google's AI training access)
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic's Crawler
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity's Crawler
+User-agent: PerplexityBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.thenewagetechx.org/sitemap.xml
