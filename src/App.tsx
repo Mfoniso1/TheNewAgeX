@@ -6,6 +6,7 @@ import { Membership } from './pages/Membership';
 import { Services } from './pages/Services';
 import { About } from './pages/About';
 import { Dashboard } from './pages/Dashboard';
+import { LiveMeet } from './pages/LiveMeet';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="services" element={<Services />} />
           <Route path="about" element={<About />} />
           <Route path="dashboard" element={<Dashboard />} />
+          <Route path="live-meet" element={<LiveMeet />} />
         </Route>
       </Routes>
     </Router>

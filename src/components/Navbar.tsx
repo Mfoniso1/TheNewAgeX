@@ -7,6 +7,7 @@ import { Logo } from './Logo';
 
 const navLinks = [
   { name: 'Mission Control', path: '/' },
+  { name: 'Live Meet', path: '/live-meet' },
   { name: 'Membership', path: '/membership' },
   { name: 'Services', path: '/services' },
   { name: 'Philosophy', path: '/about' },
