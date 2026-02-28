@@ -16,9 +16,9 @@ const services = [
       'Suggested tech stack',
       'Execution roadmap (next 30 days)'
     ],
-    outcomePositioning: 'They leave knowing exactly what to build and why it can work.',
+    outcomePositioning: 'You leave knowing exactly what to build and why it can work.',
     who: 'Builders with "too many ideas" or none at all.',
-    price: '₦5,000',
+    price: '₦15,000',
   },
   {
     icon: ShieldCheck,
@@ -33,9 +33,9 @@ const services = [
       'Clear next-step execution strategy',
       'Accountability checkpoint plan'
     ],
-    outcomePositioning: 'They stop building blindly. They build with structure.',
+    outcomePositioning: 'Stop building blindly. Build with structure.',
     who: 'Teams or individuals needing accountability.',
-    price: '₦5,000',
+    price: '₦15,000',
   },
   {
     icon: Cpu,
@@ -49,9 +49,9 @@ const services = [
       'Integration recommendations (APIs, AI, automation tools)',
       'Performance improvement suggestions'
     ],
-    outcomePositioning: 'They avoid costly technical mistakes early.',
+    outcomePositioning: 'Avoid costly technical mistakes early.',
     who: 'Engineers building complex systems.',
-    price: '₦5,000',
+    price: '₦16,000',
   },
   {
     icon: Code,
@@ -65,9 +65,9 @@ const services = [
       'Clear explanation of what was done',
       'Independent continuation strategy'
     ],
-    outcomePositioning: 'They don’t just talk — they progress visibly.',
+    outcomePositioning: 'Don’t just talk — progress visibly.',
     who: 'Developers stuck on specific features.',
-    price: '₦6,000',
+    price: '₦18,000',
   },
   {
     icon: Bug,
@@ -82,9 +82,9 @@ const services = [
       'Security & structure check',
       'Prioritized improvement checklist'
     ],
-    outcomePositioning: 'Their project becomes sharper and more professional.',
+    outcomePositioning: 'Your project becomes sharper and more professional.',
     who: 'Builders ready for production.',
-    price: '₦6,000',
+    price: '₦16,000',
   },
   {
     icon: BarChart3,
@@ -99,9 +99,9 @@ const services = [
       'Customer acquisition ideas',
       'Funnel structure overview'
     ],
-    outcomePositioning: 'They stop building for fun. They build to earn.',
+    outcomePositioning: 'Stop building for fun. Build to earn.',
     who: 'SaaS and tool builders.',
-    price: '₦7,000',
+    price: '₦18,000',
   },
   {
     icon: ListChecks,
@@ -115,9 +115,9 @@ const services = [
       'Productivity framework',
       'Clear 7–14 day sprint target'
     ],
-    outcomePositioning: 'They regain clarity and momentum.',
+    outcomePositioning: 'Regain clarity and momentum.',
     who: 'Long-term project owners.',
-    price: '₦5,000',
+    price: '₦15,000',
   },
 ];
 

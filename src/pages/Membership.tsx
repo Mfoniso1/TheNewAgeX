@@ -70,7 +70,7 @@ export const Membership = () => {
             <h3 className="text-2xl mb-2 uppercase">Standard</h3>
             <p className="font-mono text-[10px] text-zinc-500 mb-4 uppercase tracking-widest">(Waitlist Access)</p>
             <div className="flex items-baseline space-x-2">
-              <span className="text-4xl font-display text-white">₦5k - ₦7k</span>
+              <span className="text-4xl font-display text-white">₦15k - ₦18k</span>
             </div>
             <p className="font-mono text-[10px] text-brand-green mt-2 uppercase tracking-widest">1hr 30min Session</p>
           </div>
@@ -214,43 +214,43 @@ export const Membership = () => {
               <tr className="hover:bg-white/5 transition-colors">
                 <td className="p-6 text-white">Project Idea Brainstorm</td>
                 <td className="p-6 text-center text-zinc-400">1hr 30min</td>
-                <td className="p-6 text-center text-brand-green">₦5,000</td>
+                <td className="p-6 text-center text-brand-green">₦15,000</td>
                 <td className="p-6 text-center text-zinc-500">Waitlist</td>
               </tr>
               <tr className="hover:bg-white/5 transition-colors">
                 <td className="p-6 text-white">Project Leadership & Supervision</td>
                 <td className="p-6 text-center text-zinc-400">1hr 30min</td>
-                <td className="p-6 text-center text-brand-green">₦5,000</td>
+                <td className="p-6 text-center text-brand-green">₦15,000</td>
                 <td className="p-6 text-center text-zinc-500">Waitlist</td>
               </tr>
               <tr className="hover:bg-white/5 transition-colors">
                 <td className="p-6 text-white">Technical Strategy Session</td>
                 <td className="p-6 text-center text-zinc-400">1hr 30min</td>
-                <td className="p-6 text-center text-brand-green">₦5,000</td>
+                <td className="p-6 text-center text-brand-green">₦16,000</td>
                 <td className="p-6 text-center text-zinc-500">Waitlist</td>
               </tr>
               <tr className="hover:bg-white/5 transition-colors">
                 <td className="p-6 text-white">Live Build Support</td>
                 <td className="p-6 text-center text-zinc-400">1hr 30min</td>
-                <td className="p-6 text-center text-brand-green">₦6,000</td>
+                <td className="p-6 text-center text-brand-green">₦18,000</td>
                 <td className="p-6 text-center text-zinc-500">Waitlist</td>
               </tr>
               <tr className="hover:bg-white/5 transition-colors">
                 <td className="p-6 text-white">Project Review & Debugging</td>
                 <td className="p-6 text-center text-zinc-400">1hr 30min</td>
-                <td className="p-6 text-center text-brand-green">₦6,000</td>
+                <td className="p-6 text-center text-brand-green">₦16,000</td>
                 <td className="p-6 text-center text-zinc-500">Waitlist</td>
               </tr>
               <tr className="hover:bg-white/5 transition-colors">
                 <td className="p-6 text-white">Monetization Strategy</td>
                 <td className="p-6 text-center text-zinc-400">1hr 30min</td>
-                <td className="p-6 text-center text-brand-green">₦7,000</td>
+                <td className="p-6 text-center text-brand-green">₦18,000</td>
                 <td className="p-6 text-center text-zinc-500">Waitlist</td>
               </tr>
               <tr className="hover:bg-white/5 transition-colors">
                 <td className="p-6 text-white">Accountability Session</td>
                 <td className="p-6 text-center text-zinc-400">1hr 30min</td>
-                <td className="p-6 text-center text-brand-green">₦5,000</td>
+                <td className="p-6 text-center text-brand-green">₦15,000</td>
                 <td className="p-6 text-center text-zinc-500">Waitlist</td>
               </tr>
               <tr className="bg-brand-green/5 hover:bg-brand-green/10 transition-colors">
