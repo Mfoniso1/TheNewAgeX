@@ -1,4 +1,4 @@
-const SHEETDB_URL = 'https://sheetdb.io/api/v1/2moxvunsgsv1w';
+const SHEETDB_URL = 'https://sheetdb.io/api/v1/f3cwpol7knz89';
 
 export const sheetDB = {
   getSpots: async () => {
@@ -17,7 +17,7 @@ export const sheetDB = {
       return { taken: 12, total: 50 };
     }
   },
-  register: async (data: { name: string; email: string; service?: string; price?: string; receiptName?: string }) => {
+  register: async (data: { name: string; email: string; whatsapp: string; service?: string; price?: string; receiptName?: string }) => {
     try {
       const response = await fetch(SHEETDB_URL, {
         method: 'POST',

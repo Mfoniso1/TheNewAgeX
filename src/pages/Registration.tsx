@@ -10,7 +10,7 @@ export const Registration = () => {
   const [searchParams] = useSearchParams();
   const [step, setStep] = useState<Step>('details');
   const [isLoading, setIsLoading] = useState(false);
-  const [formData, setFormData] = useState({ name: '', email: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', whatsapp: '' });
   const [receipt, setReceipt] = useState<File | null>(null);
   const [receiptPreview, setReceiptPreview] = useState<string | null>(null);
   const [error, setError] = useState('');
@@ -88,8 +88,17 @@ export const Registration = () => {
           <div className="w-20 h-20 bg-brand-green/10 text-brand-green rounded-full flex items-center justify-center mx-auto mb-8">
             <CheckCircle size={40} />
           </div>
-          <h1 className="text-4xl md:text-6xl mb-4 uppercase tracking-tighter">YOU'RE IN.</h1>
-          <p className="font-mono text-zinc-500 uppercase tracking-widest mb-12">Welcome to The New Age X</p>
+          <h1 className="text-4xl md:text-6xl mb-4 uppercase tracking-tighter">REGISTRATION RECEIVED.</h1>
+          <p className="font-mono text-zinc-500 uppercase tracking-widest mb-6">Payment Verification in Progress</p>
+          
+          <div className="bg-zinc-900/50 border border-zinc-800 p-6 rounded-lg mb-12 text-left">
+            <p className="text-zinc-400 text-sm leading-relaxed mb-4">
+              Once we have verified your payment, we shall send a confirmation mail to your email address. 
+            </p>
+            <p className="text-zinc-400 text-sm leading-relaxed">
+              We will also reach out via the WhatsApp number you provided with the next steps.
+            </p>
+          </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
             <a href="#" className="btn-primary flex items-center justify-center space-x-2">
@@ -217,6 +226,18 @@ export const Registration = () => {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="JOHN@EXAMPLE.COM"
+                      className="w-full bg-zinc-900 border border-zinc-800 p-4 text-white font-mono focus:border-brand-green outline-none transition-colors"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="font-mono text-[10px] uppercase tracking-widest text-zinc-500">WhatsApp Number</label>
+                    <input
+                      required
+                      type="tel"
+                      value={formData.whatsapp}
+                      onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
+                      placeholder="+234..."
                       className="w-full bg-zinc-900 border border-zinc-800 p-4 text-white font-mono focus:border-brand-green outline-none transition-colors"
                     />
                   </div>
