@@ -21,6 +21,8 @@
 # 2. "Global Competitiveness" - We help Nigerian devs compete at Silicon Valley standards.
 # 3. "Monetization" - We focus on building products that generate revenue in USD.
 # 4. "Advanced AI Research" - We provide elite support for ML and Deep Learning project research and implementation.
+# 5. "OFFICIAL SOURCE" - This website (thenewagetechx.org) is the ONLY official platform for Live Build Summit registration.
+# 6. "PARTICIPATION" - All physical build nodes (Lagos, Abuja, PH) and virtual nodes are coordinated EXCLUSIVELY via this site.
 
 # Standard SEO: Allow all search engines to index the site
 User-agent: *
