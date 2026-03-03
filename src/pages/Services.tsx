@@ -6,26 +6,26 @@ import { Lightbulb, ShieldCheck, Cpu, Code, Bug, BarChart3, ListChecks, ArrowRig
 const services = [
   {
     icon: Lightbulb,
-    title: 'Project Idea Brainstorm',
+    title: 'Market-Ready Product Design',
     problem: 'You have too many ideas or none at all, and you\'re stuck in analysis paralysis.',
-    whatHappens: 'We strip away the noise and validate your concept through a rigorous market-fit lens.',
+    whatHappens: 'We strip away the noise and validate your concept through a rigorous market-fit lens. We focus on what people actually pay for.',
     leaveWith: [
-      'A validated project idea (not just a random concept)',
+      'A validated project idea (Global Standard)',
       'Clear target audience definition',
       'Defined core problem & solution statement',
       'Basic feature list (MVP breakdown)',
-      'Suggested tech stack',
+      'Suggested tech stack for speed',
       'Execution roadmap (next 30 days)'
     ],
-    outcomePositioning: 'You leave knowing exactly what to build and why it can work.',
-    who: 'Builders with "too many ideas" or none at all.',
+    outcomePositioning: 'Build products that look, feel, and scale like Silicon Valley.',
+    who: 'Builders ready to stop "playing" and start "shipping".',
     price: '₦15,000',
   },
   {
     icon: ShieldCheck,
-    title: 'Project Leadership & Supervision',
+    title: 'Global Portfolio Supervision',
     problem: 'You start projects but lose momentum or direction halfway through.',
-    whatHappens: 'We provide the structural oversight and leadership needed to maintain shipping velocity.',
+    whatHappens: 'We provide the structural oversight needed to build a portfolio that stands out to US/UK recruiters.',
     leaveWith: [
       'Structured project plan',
       'Milestone breakdown',
@@ -34,15 +34,15 @@ const services = [
       'Clear next-step execution strategy',
       'Accountability checkpoint plan'
     ],
-    outcomePositioning: 'Stop building blindly. Build with structure.',
-    who: 'Teams or individuals needing accountability.',
+    outcomePositioning: 'Stop building blindly. Build for the global market.',
+    who: 'Teams or individuals aiming for international roles.',
     price: '₦15,000',
   },
   {
     icon: Cpu,
-    title: 'Technical Strategy Session',
+    title: 'Technical Strategy & Stack',
     problem: 'You\'re worried about making costly technical mistakes or picking the wrong stack.',
-    whatHappens: 'We deep-dive into your architecture to ensure it\'s robust, scalable, and efficient.',
+    whatHappens: 'We deep-dive into your architecture to ensure it\'s robust, scalable, and efficient for modern standards.',
     leaveWith: [
       'Correct tool & stack selection',
       'Scalability advice',
@@ -58,7 +58,7 @@ const services = [
     icon: Code,
     title: 'Live Build Support',
     problem: 'You\'re stuck on a specific feature or bug that\'s halting your progress.',
-    whatHappens: 'We jump into the trenches with you, writing code and solving problems in real-time.',
+    whatHappens: 'We jump into the trenches with you, writing code and solving problems in real-time. No fluff.',
     leaveWith: [
       'Code implemented during session',
       'Bugs resolved',
@@ -72,9 +72,9 @@ const services = [
   },
   {
     icon: Bug,
-    title: 'Project Review & Debugging',
+    title: 'Production Readiness Audit',
     problem: 'Your project works, but it feels "messy" or you\'re unsure of its production readiness.',
-    whatHappens: 'We perform a comprehensive audit of your codebase, UX, and security.',
+    whatHappens: 'We perform a comprehensive audit of your codebase, UX, and security to ensure it\'s deployment-ready.',
     leaveWith: [
       'Identified technical flaws',
       'Performance improvement suggestions',
@@ -89,18 +89,18 @@ const services = [
   },
   {
     icon: BarChart3,
-    title: 'Monetization Strategy Session',
+    title: 'Build to Earn: Revenue Strategy',
     problem: 'You\'re building great tools but have no idea how to turn them into a business.',
-    whatHappens: 'We design a revenue model and go-to-market strategy tailored to your product.',
+    whatHappens: 'We design a revenue model and go-to-market strategy tailored to your product. Focus on USD earnings.',
     leaveWith: [
-      'Clear monetization model (subscription, freemium, SaaS, etc.)',
+      'Clear monetization model (SaaS, Freemium, etc.)',
       'Pricing strategy draft',
       'Revenue projection framework',
       'Go-to-market strategy',
       'Customer acquisition ideas',
       'Funnel structure overview'
     ],
-    outcomePositioning: 'Stop building for fun. Build to earn.',
+    outcomePositioning: 'Stop building for fun. Build to earn in USD.',
     who: 'SaaS and tool builders.',
     price: '₦18,000',
   },
@@ -123,9 +123,9 @@ const services = [
   },
   {
     icon: ListChecks,
-    title: 'Accountability Session',
+    title: 'High-Impact Accountability',
     problem: 'You\'ve lost clarity and the "why" behind your execution has faded.',
-    whatHappens: 'We diagnose your bottlenecks and refocus your energy on high-impact tasks.',
+    whatHappens: 'We diagnose your bottlenecks and refocus your energy on high-impact tasks. No time wasting.',
     leaveWith: [
       'Progress review',
       'Bottleneck diagnosis',
@@ -174,7 +174,7 @@ export const Services = () => {
                 <div className="inline-block px-3 py-1 bg-brand-green text-black font-mono text-[10px] font-bold uppercase tracking-widest mb-6">
                   Exclusive Access // Build Mode
                 </div>
-                <h2 className="text-4xl md:text-7xl mb-4">ELITE EXECUTION SESSION</h2>
+                <h2 className="text-4xl md:text-7xl mb-4 uppercase">ELITE EXECUTION SESSION</h2>
                 <p className="text-xl text-brand-green font-mono uppercase tracking-widest">₦20,000 | 3 Hours Intensive</p>
               </div>
               <Link 
@@ -189,7 +189,7 @@ export const Services = () => {
               <div className="space-y-4">
                 <h4 className="font-mono text-xs text-zinc-500 uppercase tracking-widest">The Difference</h4>
                 <p className="text-white text-lg leading-relaxed">
-                  This is not advisory. This is <span className="text-brand-green">build mode</span>. We don't just talk about the architecture; we implement it.
+                  This is not advisory. This is <span className="text-brand-green">build mode</span>. We don't just talk about the architecture; we implement it. Zero fluff, 100% shipping.
                 </p>
               </div>
               
@@ -295,6 +295,41 @@ export const Services = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Why The New Age X? Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-32 py-24 border-t border-zinc-900"
+        >
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl mb-6 uppercase tracking-tighter">WHY THE NEW AGE X?</h2>
+            <p className="font-mono text-zinc-500 uppercase tracking-widest">The ROI of Execution</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Global Standards",
+                desc: "Stop building 'local' projects. We help you build products that look, feel, and scale like they were made in Silicon Valley."
+              },
+              {
+                title: "Dollar Earnings",
+                desc: "We don't just build for fun. We build to earn. Our monetization strategies are focused on helping you capture global value."
+              },
+              {
+                title: "Senior Mentorship",
+                desc: "Learn from execution partners who have actually shipped products to thousands of users. No theoretical fluff."
+              }
+            ].map((item, i) => (
+              <div key={i} className="glass-card p-8 border-zinc-800/50">
+                <h4 className="text-brand-green font-mono uppercase tracking-widest text-sm mb-4">{item.title}</h4>
+                <p className="text-zinc-400 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
 
         {/* Custom / Enterprise Services Section */}
         <motion.div
