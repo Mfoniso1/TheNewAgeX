@@ -40,9 +40,13 @@ export const Home = () => {
           </motion.div>
 
           <h1 className="text-6xl md:text-8xl lg:text-9xl mb-6 leading-[0.9] tracking-tighter">
-            CODE IS DEAD.<br />
-            <span className="text-brand-green">VIBE</span> IS THE NEW CASH.
+            IDEAS ARE CHEAP.<br />
+            <span className="text-brand-green">EXECUTION</span> IS EVERYTHING.
           </h1>
+
+          <p className="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-mono uppercase tracking-tight">
+            Stop watching tutorials. Start shipping products. The New Age X is the terminal for high-velocity builders.
+          </p>
 
           <div className="h-12 md:h-16 flex items-center justify-center mb-12">
             <span className="font-mono text-xl md:text-2xl text-zinc-500 mr-4">I AM A</span>
@@ -182,16 +186,130 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* Philosophy Teaser */}
-      <section className="py-24 border-y border-zinc-900 bg-zinc-950/50">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-5xl md:text-7xl mb-8">LEARNING ALONE IS <span className="text-zinc-700 line-through">DEAD</span></h2>
-          <p className="text-xl md:text-2xl text-zinc-400 max-w-3xl mx-auto mb-12">
-            The era of watching tutorials for 100 hours is over. The New Age X is about execution, accountability, and shipping real products.
-          </p>
-          <Link to="/about" className="btn-outline">
-            Read Our Manifesto
-          </Link>
+      {/* Testimonials / Social Proof */}
+      <section className="py-24 px-4 bg-zinc-900/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl mb-4 uppercase tracking-tighter">VOICES FROM THE TRENCHES</h2>
+            <p className="font-mono text-zinc-500 uppercase tracking-widest">Beta Tester Feedback // Early Adopters</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                quote: "I spent 6 months 'learning' React. In one Elite Session, we built a working SaaS. The speed is terrifying.",
+                author: "David O.",
+                role: "Fullstack Developer"
+              },
+              {
+                quote: "The New Age X isn't a course. It's a factory. You don't leave with notes; you leave with a URL.",
+                author: "Sarah J.",
+                role: "AI Automation Specialist"
+              },
+              {
+                quote: "Finally, a place that values shipping over syntax. The Vibe Coding philosophy changed how I think about money.",
+                author: "Emmanuel K.",
+                role: "Product Engineer"
+              }
+            ].map((t, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="glass-card p-8 border-zinc-800/50"
+              >
+                <div className="text-brand-green mb-6">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-lg">★</span>
+                  ))}
+                </div>
+                <p className="text-zinc-300 italic mb-8 leading-relaxed">"{t.quote}"</p>
+                <div>
+                  <p className="text-white font-bold uppercase tracking-tight">{t.author}</p>
+                  <p className="text-zinc-500 font-mono text-[10px] uppercase tracking-widest">{t.role}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Manifesto Section */}
+      <section className="py-32 px-4 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-zinc-800 to-transparent" />
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="space-y-12"
+          >
+            <h2 className="text-5xl md:text-8xl uppercase tracking-tighter leading-none">
+              TUTORIAL HELL IS A <span className="text-zinc-800">PRISON.</span><br />
+              <span className="text-brand-green">WE ARE THE ESCAPE.</span>
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left pt-12">
+              <div className="space-y-4">
+                <h4 className="text-brand-green font-mono uppercase tracking-widest text-sm">The Problem</h4>
+                <p className="text-zinc-400 leading-relaxed">
+                  You've watched 100 hours of YouTube. You've bought 5 Udemy courses. Yet, when you open a blank editor, you freeze. You are addicted to consumption, not creation.
+                </p>
+              </div>
+              <div className="space-y-4">
+                <h4 className="text-brand-green font-mono uppercase tracking-widest text-sm">The Solution</h4>
+                <p className="text-zinc-400 leading-relaxed">
+                  The New Age X forces you into the trenches. We don't teach you how to code; we show you how to build. We value shipping a "messy" product over a "perfect" idea that never launches.
+                </p>
+              </div>
+            </div>
+
+            <div className="pt-12">
+              <Link to="/register" className="btn-primary px-16 py-6 text-xl glitch-hover">
+                Join The Resistance
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24 px-4 border-t border-zinc-900">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-6xl mb-16 uppercase tracking-tighter text-center">INTEL / FAQ</h2>
+          
+          <div className="space-y-6">
+            {[
+              {
+                q: "Is this for absolute beginners?",
+                a: "No. You should have a basic understanding of what code is. We are for builders who want to move from 'knowing' to 'doing' at an elite level."
+              },
+              {
+                q: "What is 'Vibe Coding'?",
+                a: "It's the art of using AI and high-level abstractions to build complex systems at 10x speed. It's about focusing on the product vibe and logic rather than fighting with syntax."
+              },
+              {
+                q: "Is the ₦10k Waitlist fee refundable?",
+                a: "No. The fee is a commitment filter. It ensures that every person in the room is serious about execution. It also grants you immediate access to our resource vault."
+              },
+              {
+                q: "Do I need a high-end PC?",
+                a: "If you can run a browser and VS Code, you're ready. Most of our tools are cloud-based and AI-driven."
+              }
+            ].map((item, i) => (
+              <div key={i} className="glass-card p-6 border-zinc-800/30">
+                <h4 className="text-white uppercase mb-4 tracking-tight flex items-center">
+                  <span className="text-brand-green mr-4 font-mono">0{i+1}</span>
+                  {item.q}
+                </h4>
+                <p className="text-zinc-500 text-sm leading-relaxed pl-10">
+                  {item.a}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>
