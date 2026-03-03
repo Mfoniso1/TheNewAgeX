@@ -89,3 +89,6 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://www.thenewagetechx.org/sitemap.xml
+
+# LLM Context
+# For a full machine-readable context of this site, visit: https://www.thenewagetechx.org/llms.txt
