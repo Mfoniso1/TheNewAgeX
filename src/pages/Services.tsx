@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { Lightbulb, ShieldCheck, Cpu, Code, Bug, BarChart3, ListChecks, ArrowRight, Zap, CheckCircle2 } from 'lucide-react';
 
 const services = [
@@ -104,6 +105,23 @@ const services = [
     price: '₦18,000',
   },
   {
+    icon: Zap,
+    title: 'AI Vibe Coding Masterclass',
+    problem: 'You want to master the art of building with AI but don\'t know where to start.',
+    whatHappens: 'A comprehensive deep-dive into the "Vibe Coding" philosophy—building high-quality apps at 10x speed using AI.',
+    leaveWith: [
+      'Mastery of AI-assisted development',
+      'Prompt engineering for complex systems',
+      'Workflow optimization techniques',
+      'Real-world project built during class',
+      'Access to exclusive AI tool stack'
+    ],
+    outcomePositioning: 'Master the future of development. Build at the speed of thought.',
+    who: 'Developers and builders ready to level up with AI.',
+    price: '₦25,000',
+    originalPrice: '₦50,000'
+  },
+  {
     icon: ListChecks,
     title: 'Accountability Session',
     problem: 'You\'ve lost clarity and the "why" behind your execution has faded.',
@@ -151,7 +169,7 @@ export const Services = () => {
           </div>
           
           <div className="relative z-10">
-            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 mb-12">
+              <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 mb-12">
               <div>
                 <div className="inline-block px-3 py-1 bg-brand-green text-black font-mono text-[10px] font-bold uppercase tracking-widest mb-6">
                   Exclusive Access // Build Mode
@@ -159,9 +177,12 @@ export const Services = () => {
                 <h2 className="text-4xl md:text-7xl mb-4">ELITE EXECUTION SESSION</h2>
                 <p className="text-xl text-brand-green font-mono uppercase tracking-widest">₦20,000 | 3 Hours Intensive</p>
               </div>
-              <button className="btn-primary px-12 py-4 text-lg w-full lg:w-auto glitch-hover">
+              <Link 
+                to={`/register?service=${encodeURIComponent('Elite Execution Session')}&price=20000`}
+                className="btn-primary px-12 py-4 text-lg w-full lg:w-auto glitch-hover text-center"
+              >
                 Book Elite Now
-              </button>
+              </Link>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 border-t border-zinc-800 pt-12">
@@ -219,7 +240,12 @@ export const Services = () => {
                 </div>
                 <div className="text-right">
                   <p className="font-mono text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Investment</p>
-                  <p className="text-2xl font-display text-white">{service.price}</p>
+                  <div className="flex flex-col items-end">
+                    {service.originalPrice && (
+                      <span className="text-xs text-zinc-500 line-through font-mono">{service.originalPrice}</span>
+                    )}
+                    <p className="text-2xl font-display text-white">{service.price}</p>
+                  </div>
                 </div>
               </div>
               
@@ -258,10 +284,13 @@ export const Services = () => {
                 <p className="text-[10px] text-brand-green font-mono uppercase tracking-widest text-center">
                   {service.outcomePositioning}
                 </p>
-                <button className="btn-primary w-full flex items-center justify-center space-x-2 py-2 text-xs glitch-hover">
+                <Link 
+                  to={`/register?service=${encodeURIComponent(service.title)}&price=${service.price.replace(/[^0-9]/g, '')}`}
+                  className="btn-primary w-full flex items-center justify-center space-x-2 py-2 text-xs glitch-hover"
+                >
                   <span>Book Session</span>
                   <ArrowRight size={14} />
-                </button>
+                </Link>
               </div>
             </motion.div>
           ))}

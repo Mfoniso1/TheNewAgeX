@@ -60,10 +60,13 @@ export const Home = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Link to="/register" className="btn-primary w-full sm:w-auto px-12 glitch-hover">
+            <Link 
+              to={`/register?service=${encodeURIComponent('Summit Waitlist')}&price=10000`}
+              className="btn-primary w-full sm:w-auto px-12 glitch-hover text-center"
+            >
               Register Now
             </Link>
-            <Link to="/membership" className="btn-outline w-full sm:w-auto px-12">
+            <Link to="/membership" className="btn-outline w-full sm:w-auto px-12 text-center">
               Explore Membership
             </Link>
           </div>
@@ -138,7 +141,10 @@ export const Home = () => {
                   className="h-full bg-brand-green"
                 />
               </div>
-              <Link to="/register" className="flex items-center justify-between group text-white hover:text-brand-green transition-colors">
+              <Link 
+                to={`/register?service=${encodeURIComponent('Summit Waitlist')}&price=10000`}
+                className="flex items-center justify-between group text-white hover:text-brand-green transition-colors"
+              >
                 <span className="font-mono text-xs uppercase tracking-widest">Secure Your Spot</span>
                 <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
               </Link>

@@ -91,9 +91,9 @@ export const Membership = () => {
             </div>
           </div>
 
-          <button className="btn-outline w-full py-2 text-xs">
+          <Link to="/services" className="btn-outline w-full py-2 text-xs text-center">
             Join Waitlist
-          </button>
+          </Link>
         </motion.div>
 
         {/* Elite Tier */}
@@ -137,10 +137,13 @@ export const Membership = () => {
             </div>
           </div>
 
-          <button className="btn-primary w-full py-2 text-xs flex items-center justify-center space-x-2 glitch-hover">
+          <Link 
+            to={`/register?service=${encodeURIComponent('Elite Execution Session')}&price=20000`}
+            className="btn-primary w-full py-2 text-xs flex items-center justify-center space-x-2 glitch-hover text-center"
+          >
             <span>Book Elite Session</span>
             <ArrowRight size={14} />
-          </button>
+          </Link>
         </motion.div>
       </div>
 
@@ -189,7 +192,10 @@ export const Membership = () => {
           <div className="text-center lg:text-right shrink-0">
             <p className="font-mono text-xs text-zinc-500 uppercase tracking-widest mb-2">Waitlist Commitment</p>
             <p className="text-5xl font-display text-white mb-8">₦10,000</p>
-            <Link to="/register" className="btn-primary px-12 py-4 text-lg flex items-center justify-center space-x-3 glitch-hover">
+            <Link 
+              to={`/register?service=${encodeURIComponent('Summit Waitlist')}&price=10000`}
+              className="btn-primary px-12 py-4 text-lg flex items-center justify-center space-x-3 glitch-hover text-center"
+            >
               <span>Join Summit Waitlist</span>
               <ArrowRight size={20} />
             </Link>
@@ -245,6 +251,12 @@ export const Membership = () => {
                 <td className="p-6 text-white">Monetization Strategy</td>
                 <td className="p-6 text-center text-zinc-400">1hr 30min</td>
                 <td className="p-6 text-center text-brand-green">₦18,000</td>
+                <td className="p-6 text-center text-zinc-500">Waitlist</td>
+              </tr>
+              <tr className="hover:bg-white/5 transition-colors">
+                <td className="p-6 text-white">AI Vibe Coding Masterclass</td>
+                <td className="p-6 text-center text-zinc-400">Full Course</td>
+                <td className="p-6 text-center text-brand-green">₦25,000</td>
                 <td className="p-6 text-center text-zinc-500">Waitlist</td>
               </tr>
               <tr className="hover:bg-white/5 transition-colors">
