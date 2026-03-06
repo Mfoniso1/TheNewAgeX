@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Copy, Check, Terminal, Zap, ExternalLink } from 'lucide-react';
+import { X, Copy, Check, Terminal, Zap, ExternalLink, MessageSquare } from 'lucide-react';
 
 interface Mission {
   id: string;
@@ -208,10 +208,21 @@ export const ExecutionBoard = () => {
                       {selectedMission.prompt}
                     </div>
                   </div>
-                  <p className="mt-4 text-[10px] text-zinc-600 font-mono uppercase tracking-widest flex items-center">
-                    <ExternalLink size={10} className="mr-2" />
-                    Paste this into Google AI Studio to begin building.
-                  </p>
+                  <div className="mt-4 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                    <p className="text-[10px] text-zinc-600 font-mono uppercase tracking-widest flex items-center">
+                      <ExternalLink size={10} className="mr-2" />
+                      Paste this into Google AI Studio to begin building.
+                    </p>
+                    <a 
+                      href="https://aistudio.google.com/apps/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1.5 bg-zinc-800 hover:bg-zinc-700 text-white font-mono text-[10px] uppercase tracking-widest flex items-center transition-colors"
+                    >
+                      <ExternalLink size={12} className="mr-2" />
+                      Open AI Studio
+                    </a>
+                  </div>
                 </div>
 
                 {/* Step 2 */}
@@ -250,6 +261,15 @@ export const ExecutionBoard = () => {
                 >
                   Close Mission
                 </button>
+                <a 
+                  href="https://wa.me/2348123456789" // Placeholder for Lead Supervision
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 py-4 border border-brand-green/30 text-brand-green font-bold uppercase tracking-widest text-xs hover:bg-brand-green/10 transition-all text-center flex items-center justify-center space-x-2"
+                >
+                  <MessageSquare size={14} />
+                  <span>Reach Lead Supervision</span>
+                </a>
                 <a 
                   href="/register"
                   className="flex-1 py-4 bg-brand-green text-black font-bold uppercase tracking-widest text-xs hover:bg-white transition-all text-center"
