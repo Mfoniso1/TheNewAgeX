@@ -66,3 +66,19 @@
 .glitch-hover:hover {
   animation: glitch 0.3s cubic-bezier(.25,.46,.45,.94) both infinite;
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-zinc-950;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-zinc-800 rounded-full;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  @apply bg-brand-green;
+}

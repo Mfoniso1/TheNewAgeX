@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, MapPin, Users, ArrowRight, Zap, Shield, Target } from 'lucide-react';
 import { sheetDB } from '@/src/services/sheetDB';
+import { ExecutionBoard } from '@/src/components/ExecutionBoard';
 
 const roles = ['Developer', 'Engineer', 'Automation Specialist', 'AI Specialist'];
 
@@ -185,6 +186,9 @@ export const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Execution Board Section */}
+      <ExecutionBoard />
 
       {/* Testimonials / Social Proof */}
       <section className="py-24 px-4 bg-zinc-900/20">
