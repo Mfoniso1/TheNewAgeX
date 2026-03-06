@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Copy, Check, Terminal, Zap, ExternalLink, MessageSquare } from 'lucide-react';
+import { X, Copy, Check, Terminal, Zap, ExternalLink, MessageSquare, Twitter } from 'lucide-react';
 
 interface Mission {
   id: string;
@@ -249,6 +249,35 @@ export const ExecutionBoard = () => {
                       />
                       <p className="text-[10px] text-zinc-700 font-mono uppercase">Notes are saved locally in your browser session.</p>
                     </div>
+                  </div>
+                </div>
+
+                {/* Step 3 */}
+                <div className="mt-12">
+                  <div className="flex items-center space-x-3 mb-6">
+                    <div className="w-8 h-8 rounded-full bg-brand-green text-black flex items-center justify-center font-bold text-sm">3</div>
+                    <h4 className="text-lg uppercase tracking-tight">Broadcast Your Win</h4>
+                  </div>
+                  
+                  <div className="glass-card p-6 border-brand-green/10 bg-brand-green/5 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div className="flex-1">
+                      <p className="text-zinc-300 text-sm leading-relaxed mb-2">
+                        Built something impressive? Share your progress with the community and inspire others.
+                      </p>
+                      <p className="text-brand-green font-mono text-xs uppercase tracking-widest">
+                        #BuildWithGeminiNG #GoogleAIStudioNigeria
+                      </p>
+                    </div>
+                    <button 
+                      onClick={() => {
+                        const text = encodeURIComponent(`I just accepted the "${selectedMission.name}" mission on the Google AI Studio Nigeria Execution Board! 🚀\n\nBuilding solutions for ${selectedMission.category} using Gemini. #BuildWithGeminiNG #GoogleAIStudioNigeria`);
+                        window.open(`https://twitter.com/intent/tweet?text=${text}`, '_blank');
+                      }}
+                      className="whitespace-nowrap px-6 py-3 bg-zinc-800 hover:bg-zinc-700 text-white font-mono text-[10px] uppercase tracking-widest flex items-center transition-colors border border-zinc-700"
+                    >
+                      <Twitter size={14} className="mr-2" />
+                      Share on X
+                    </button>
                   </div>
                 </div>
               </div>
