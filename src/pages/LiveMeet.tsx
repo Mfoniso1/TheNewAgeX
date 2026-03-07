@@ -4,7 +4,7 @@ import { Video, Users, Shield, Share2, Radio, ExternalLink, ArrowRight, Sparkles
 
 export const LiveMeet = () => {
   const [step, setStep] = useState<'welcome' | 'link'>('welcome');
-  const meetUrl = 'https://meet.google.com/qbn-whky-ans';
+  const meetUrl = 'https://meet.google.com/exv-dhgv-nhy';
 
   const handleContinue = () => {
     setStep('link');
@@ -98,7 +98,7 @@ export const LiveMeet = () => {
             <div className="space-y-4">
               <div className="bg-black border border-zinc-800 p-4 rounded-sm flex items-center justify-between group">
                 <code className="text-brand-green font-mono text-xs truncate mr-4">
-                  qbn-whky-ans
+                  exv-dhgv-nhy
                 </code>
                 <button 
                   onClick={handleCopyLink}
