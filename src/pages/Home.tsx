@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, MapPin, Users, ArrowRight, Zap, Shield, Target, CheckCircle2 } from 'lucide-react';
 import { sheetDB } from '@/src/services/sheetDB';
-import { ExecutionBoard } from '@/src/components/ExecutionBoard';
 
 const roles = ['Developer', 'Engineer', 'Automation Specialist', 'AI Specialist'];
 
@@ -187,8 +186,33 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* Execution Board Section */}
-      <ExecutionBoard />
+      {/* Execution Board Teaser Section */}
+      <section className="py-24 px-4 bg-zinc-950 border-y border-zinc-900">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-block px-4 py-1 border border-brand-green/30 bg-brand-green/5 mb-6"
+          >
+            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-brand-green">
+              Mission Control // Active Operations
+            </span>
+          </motion.div>
+          <h2 className="text-5xl md:text-7xl mb-8 uppercase tracking-tighter">Execution Board</h2>
+          <p className="text-xl text-zinc-400 leading-relaxed max-w-2xl mx-auto mb-12">
+            The terminal for high-velocity builders. Select a mission, build the solution, and join the elite. 
+            Access Tier 1 practice missions and prepare for the global stage.
+          </p>
+          <Link 
+            to="/execution-board" 
+            className="btn-primary px-16 py-6 text-xl glitch-hover inline-flex items-center gap-4"
+          >
+            <span>Enter Execution Board</span>
+            <ArrowRight size={24} />
+          </Link>
+        </div>
+      </section>
 
       {/* Testimonials / Social Proof */}
       <section className="py-24 px-4 bg-zinc-900/20">

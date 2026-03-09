@@ -7,11 +7,11 @@ import { Logo } from './Logo';
 
 const navLinks = [
   { name: 'Mission Control', path: '/' },
+  { name: 'Execution Board', path: '/execution-board' },
   { name: 'Live Meet', path: '/live-meet' },
   { name: 'Membership', path: '/membership' },
   { name: 'Services', path: '/services' },
   { name: 'Philosophy', path: '/about' },
-  { name: 'Register', path: '/register' },
 ];
 
 export const Navbar = () => {

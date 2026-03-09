@@ -7,6 +7,7 @@ import { Services } from './pages/Services';
 import { About } from './pages/About';
 import { Dashboard } from './pages/Dashboard';
 import { LiveMeet } from './pages/LiveMeet';
+import { ExecutionBoardPage } from './pages/ExecutionBoardPage';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="about" element={<About />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="live-meet" element={<LiveMeet />} />
+          <Route path="execution-board" element={<ExecutionBoardPage />} />
         </Route>
       </Routes>
     </Router>
