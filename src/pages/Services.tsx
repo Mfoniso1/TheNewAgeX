@@ -5,6 +5,57 @@ import { Lightbulb, ShieldCheck, Cpu, Code, Bug, BarChart3, ListChecks, ArrowRig
 
 const services = [
   {
+    icon: Zap,
+    title: 'AI Masterclass: Web + Backend + DB',
+    problem: 'You want to build full-stack web applications but are overwhelmed by backend and database complexity.',
+    whatHappens: 'A deep-dive into building complete web apps with integrated backends and databases at 10x speed using AI.',
+    leaveWith: [
+      'Complete Web App + Backend + DB',
+      'Save cost of Supabase & Premium Platforms',
+      'Mastery of AI-assisted development',
+      'Prompt engineering for complex systems',
+      'Database architecture & security'
+    ],
+    outcomePositioning: 'Build production-ready web systems at the speed of thought.',
+    who: 'Builders ready to ship complete web products.',
+    price: '₦24,999',
+    originalPrice: '₦50,000'
+  },
+  {
+    icon: Cpu,
+    title: 'AI Masterclass: Mobile Apps',
+    problem: 'You want to launch on App Store and Play Store but mobile development feels like a mountain.',
+    whatHappens: 'Master the workflow of building high-performance Android and iOS apps using AI-driven cross-platform tools.',
+    leaveWith: [
+      'Functional Mobile App (Android & iOS)',
+      'App Store & Play Store readiness',
+      'Mobile-specific AI workflows',
+      'Native feature integration',
+      'Performance optimization for mobile'
+    ],
+    outcomePositioning: 'Dominate the mobile market with AI-powered speed.',
+    who: 'Developers aiming for the mobile ecosystem.',
+    price: '₦49,999',
+    originalPrice: '₦100,000'
+  },
+  {
+    icon: Code,
+    title: 'AI Masterclass: Desktop Apps',
+    problem: 'You need to build powerful software for Windows, Mac, or Linux without spending months on native code.',
+    whatHappens: 'Learn to build and package professional desktop applications for all major platforms using AI-accelerated frameworks.',
+    leaveWith: [
+      'Desktop Apps (Win, Mac, Linux)',
+      'Cross-platform packaging & distribution',
+      'System-level integration mastery',
+      'Offline-first architecture',
+      'Professional software deployment'
+    ],
+    outcomePositioning: 'Build professional software for every desktop platform.',
+    who: 'Engineers building enterprise or utility desktop tools.',
+    price: '₦99,999',
+    originalPrice: '₦200,000'
+  },
+  {
     icon: Lightbulb,
     title: 'Market-Ready Product Design',
     problem: 'You have too many ideas or none at all, and you\'re stuck in analysis paralysis.',
@@ -103,23 +154,6 @@ const services = [
     outcomePositioning: 'Stop building for fun. Build to earn in USD.',
     who: 'SaaS and tool builders.',
     price: '₦18,000',
-  },
-  {
-    icon: Zap,
-    title: 'AI Vibe Coding Masterclass',
-    problem: 'You want to master the art of building with AI but don\'t know where to start.',
-    whatHappens: 'A comprehensive deep-dive into the "Vibe Coding" philosophy—building high-quality apps at 10x speed using AI.',
-    leaveWith: [
-      'Mastery of AI-assisted development',
-      'Prompt engineering for complex systems',
-      'Workflow optimization techniques',
-      'Real-world project built during class',
-      'Access to exclusive AI tool stack'
-    ],
-    outcomePositioning: 'Master the future of development. Build at the speed of thought.',
-    who: 'Developers and builders ready to level up with AI.',
-    price: '₦25,000',
-    originalPrice: '₦50,000'
   },
   {
     icon: ListChecks,
@@ -224,7 +258,7 @@ export const Services = () => {
         </motion.div>
 
         {/* Standard Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.title}

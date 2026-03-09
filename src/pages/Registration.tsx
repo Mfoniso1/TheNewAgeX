@@ -331,6 +331,12 @@ export const Registration = () => {
 
                   {error && <p className="text-red-500 font-mono text-xs uppercase">{error}</p>}
 
+                  <div className="p-4 bg-brand-green/5 border border-brand-green/20 rounded-lg">
+                    <p className="text-[10px] text-brand-green font-mono uppercase text-center tracking-widest">
+                      Note: You will receive an email to confirm your payment once verified.
+                    </p>
+                  </div>
+
                   <div className="flex gap-4">
                     <button
                       type="button"

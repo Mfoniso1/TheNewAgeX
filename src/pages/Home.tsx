@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { Calendar, Clock, MapPin, Users, ArrowRight, Zap, Shield, Target } from 'lucide-react';
+import { Calendar, Clock, MapPin, Users, ArrowRight, Zap, Shield, Target, CheckCircle2 } from 'lucide-react';
 import { sheetDB } from '@/src/services/sheetDB';
 import { ExecutionBoard } from '@/src/components/ExecutionBoard';
 
@@ -234,6 +234,99 @@ export const Home = () => {
                   <p className="text-white font-bold uppercase tracking-tight">{t.author}</p>
                   <p className="text-zinc-500 font-mono text-[10px] uppercase tracking-widest">{t.role}</p>
                 </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AI Masterclass Section */}
+      <section className="py-24 px-4 bg-brand-green/5 border-y border-brand-green/10">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-block px-3 py-1 border border-brand-green/30 bg-brand-green/5 mb-6">
+              <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-brand-green">
+                New: AI Masterclass Series // Build Mode
+              </span>
+            </div>
+            <h2 className="text-5xl md:text-7xl uppercase tracking-tighter leading-none mb-6">
+              MASTER THE ART OF<br />
+              <span className="text-brand-green">VIBE CODING.</span>
+            </h2>
+            <p className="text-xl text-zinc-400 leading-relaxed max-w-2xl mx-auto">
+              Choose your path and master the future of development. Build complete systems at 10x speed using AI.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Web + Backend + DB',
+                price: '24,999',
+                original: '50,000',
+                features: [
+                  'Complete Web App + Backend + DB',
+                  'Save cost of Supabase & Premium Platforms',
+                  'Mastery of AI-assisted development',
+                  'Prompt engineering for complex systems'
+                ]
+              },
+              {
+                title: 'Mobile Apps (Android & iOS)',
+                price: '49,999',
+                original: '100,000',
+                features: [
+                  'Functional Mobile App (Android & iOS)',
+                  'App Store & Play Store readiness',
+                  'Mobile-specific AI workflows',
+                  'Native feature integration'
+                ]
+              },
+              {
+                title: 'Desktop Apps (Win, Mac, Linux)',
+                price: '99,999',
+                original: '200,000',
+                features: [
+                  'Desktop Apps (Win, Mac, Linux)',
+                  'Cross-platform packaging & distribution',
+                  'System-level integration mastery',
+                  'Professional software deployment'
+                ]
+              }
+            ].map((tier, i) => (
+              <motion.div
+                key={tier.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="glass-card p-8 border-brand-green/20 shadow-neon relative flex flex-col"
+              >
+                <div className="flex justify-between items-start mb-8">
+                  <Zap className="text-brand-green" size={24} />
+                  <div className="text-right">
+                    <span className="block text-zinc-500 font-mono text-[10px] uppercase line-through">₦{tier.original}</span>
+                    <span className="text-2xl font-display text-white">₦{tier.price}</span>
+                  </div>
+                </div>
+
+                <h3 className="text-xl mb-6 uppercase tracking-tight">{tier.title}</h3>
+
+                <ul className="space-y-3 mb-8 flex-grow">
+                  {tier.features.map((feature) => (
+                    <li key={feature} className="text-xs text-zinc-400 flex items-start gap-2">
+                      <CheckCircle2 size={14} className="text-brand-green shrink-0 mt-0.5" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link 
+                  to={`/register?service=${encodeURIComponent('AI Masterclass: ' + tier.title)}&price=${tier.price.replace(/,/g, '')}`}
+                  className="btn-primary w-full py-3 text-sm glitch-hover text-center"
+                >
+                  Enroll Now
+                </Link>
               </motion.div>
             ))}
           </div>
