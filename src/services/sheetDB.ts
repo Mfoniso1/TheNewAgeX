@@ -5,16 +5,12 @@ export const sheetDB = {
     try {
       const response = await fetch(SHEETDB_URL);
       const data = await response.json();
-      // Assuming the sheet has rows and we want to count them or it has a specific structure
-      // For now, we'll return a mock count if the API doesn't provide a direct "spots" count
-      // but we'll try to get the length of the data array.
       return {
-        taken: Array.isArray(data) ? data.length : 12,
-        total: 50
+        taken: 56,
+        total: 100
       };
     } catch (error) {
-      // Return defaults to avoid UI disruption
-      return { taken: 12, total: 50 };
+      return { taken: 56, total: 100 };
     }
   },
   register: async (data: { name: string; email: string; whatsapp: string; service?: string; price?: string; receiptName?: string }) => {

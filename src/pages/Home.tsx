@@ -8,7 +8,7 @@ const roles = ['Developer', 'Engineer', 'Automation Specialist', 'AI Specialist'
 
 export const Home = () => {
   const [roleIndex, setRoleIndex] = useState(0);
-  const [spots, setSpots] = useState({ taken: 0, total: 50 });
+  const [spots, setSpots] = useState({ taken: 56, total: 100 });
 
   useEffect(() => {
     const interval = setInterval(() => {
